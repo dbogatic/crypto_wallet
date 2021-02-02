@@ -29,10 +29,10 @@ print(unspent)
 # input address to send funds to
 addresses = ["n1RdWn8KdvGx9u2SxuG8Lxnvg6R7hRtDVC"]
 
-#outputs = []
+outputs = []
 
-#for address in addresses:
-    #outputs.append((address, 0.000001, "btc"))
+for address in addresses:
+    outputs.append((address, 0.000001, "btc"))
 
-#print(key.send(outputs))
+print(key.send(outputs))
 
