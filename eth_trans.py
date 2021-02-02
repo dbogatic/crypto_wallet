@@ -55,5 +55,5 @@ def send_tx(sender, recipient, amount):
 
     return result.hex()
 
-send_tx(account_one.address,account_two.address, 1)
+send_tx(account_one.address,account_two.address, 2)
 
