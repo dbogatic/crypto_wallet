@@ -33,12 +33,12 @@ print(unspent)
 
 # input address we obtined from hd derive (second BTC-test address in btc_test_keys.csv file) to send funds to, send funds and obtain transaction confirmation
 
-#addresses = ["n1RdWn8KdvGx9u2SxuG8Lxnvg6R7hRtDVC"]
+addresses = ["n1RdWn8KdvGx9u2SxuG8Lxnvg6R7hRtDVC"]
 
-#outputs = []
+outputs = []
 
-#for address in addresses:
-    #outputs.append((address, 0.0001, "btc"))
+for address in addresses:
+    outputs.append((address, 0.0001, "btc"))
 
-#print(key.send(outputs))
+print(key.send(outputs))
 
