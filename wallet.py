@@ -19,7 +19,7 @@ print(which_coin)
 
 mnemonic_phrase = os.getenv("MNEMONIC")
 
-# pass the command to derive keys foreth and btc-test
+# pass the command to derive keys for eth and btc-test
 
 command = f" ./derive -g  --mnemonic='{mnemonic_phrase}' --coin='{which_coin}' --numderive=3  --cols=path,address,privkey,pubkey --format=json "
 
