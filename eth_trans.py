@@ -8,15 +8,16 @@ from pathlib import Path
 from getpass import getpass
 load_dotenv()
 
+
 # we will be using a Web3 library on a local host to conduct eth transaction between two nodes in a running local blockchain "bogicash"
 
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 
 # obtain sender and receiver eth addresses by using a private key. The keys are created using hd derive and can be seen in eth_keys.csv or keys.ipynb
 
-account_one = Account().privateKeyToAccount(os.getenv("PRIVATE_KEY_SEND"))
+account_one = Account().from_key(os.getenv("PRIVATE_KEY_SEND"))
 
-account_two = Account().privateKeyToAccount(os.getenv("PRIVATE_KEY_REC"))
+account_two = Account().from_key(os.getenv("PRIVATE_KEY_REC"))
 
 
 balance_account_one = w3.eth.getBalance(account_one.address)
@@ -65,5 +66,5 @@ def send_tx(sender, recipient, amount):
 
     return result.hex()
 
-# send_tx(account_one.address,account_two.address, 1)
+send_tx(account_one.address,account_two.address, 1)
 
