@@ -1,14 +1,14 @@
 from bit import wif_to_key
+from bit import PrivateKeyTestnet
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
-# sending from the BTC-test private key we obtained from hd derive command in wallet.py (you can see it in keys.ipynb in btc_test_priv_keys dataframe)
+# access account information by accessing BTC-test private key we obtained from hd derive command in wallet.py (located in keys.ipynb in btc_test_priv_keys dataframe)
 
 key = os.getenv("WIF_KEY")
 
-key = wif_to_key(key)
+key = PrivateKeyTestnet(key)
 print(key)
 
 # get balance in BTC
@@ -31,7 +31,7 @@ unspent = key.unspents
 
 print(unspent)
 
-# input address we obtined from hd derive (second BTC-test address in btc_test_keys.csv file) to send funds to, send funds and obtain transaction confirmation
+# input address we obtined from hd derive (the second BTC-test address in btc_test_keys.csv file) to send funds to, send funds and obtain transaction confirmation
 
 addresses = ["n1RdWn8KdvGx9u2SxuG8Lxnvg6R7hRtDVC"]
 

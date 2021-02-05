@@ -1,17 +1,15 @@
 import subprocess
 import json
 from pprint import pprint
-
 import pandas as pd
 import os
 from dotenv import load_dotenv
 load_dotenv()
-import constants
 from constants import *
 
 # input coin code for BTC-test, ETH or BTC after the prompt to obtain keys for the selected crypto
 
-which_coin = input(f" Which coin? Type one of the following: {BTCTEST, BTC, ETH}")
+which_coin = input(f" Which coin? Type in one of the following: {BTCTEST, BTC, ETH}")
 
 print(which_coin)
 
