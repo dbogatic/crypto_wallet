@@ -73,21 +73,23 @@ Source: [eth-account documentation](https://eth-account.readthedocs.io/en/stable
 #
 ## Create a BTC-test transaction
 
-The following step is to create BTC-test transaction using a python [bit](https://pypi.org/project/bit/) library. Please refer to [btc_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_trans.py) for details. 
+The following step is to create BTC-test transaction using a python [bit](https://pypi.org/project/bit/) library. Please refer to [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_private_testnet.py) for details. 
 
-* Again, the first step is to obtain private keys we created with hd-wallet-derive so we can get addresses for the sender and receiver.
+* Again, the first step is to obtain private keys we created with hd-wallet-derive so we can get addresses for the sender and receiver. In this case we use `PrivateKeyTestnet()` method. 
 
 * Then, we obtain sender account balance and unspent transactions. 
 
-* Next, we input the address of the recipient where we will send bitcoin.
+* Next, we specify the address of the recipient where we will send bitcoin.
 
-* Finally, we create a transaction, send it and obtain a confirmation on the blockchain and Bitcoin Testnet. 
+* Then we input the btc amount to be sent in the user prompt window.
 
-![testnet_confirm](images/Screen_Shot7.png)
+* Finally, we create a transaction, send it and obtain a confirmation on the Bitcoin Testnet. 
 
-![btc_blockchain_confirm](images/Screen_Shot8.png)
+![testnet_confirm](images/Screen_Shot10.png)
 
-* We can see the matching TX Hash for blockchain and Bitcoin Testnet conffirmations.
+![btc_blockchain_confirm](images/Screen_Shot11.png)
+
+* We can see the matching TX Hash for blockchain and Bitcoin Testnet confirmations.
 
 #
 ## Create a multi-crypto wallet
@@ -102,7 +104,7 @@ The final step is to join hd-wallet-derive private key derivation tool, ETH tran
 
 * Please note that private keys are manually selected after being derived and placed in .env file to be hidden from public (in the next revision of this crypto-wallet repo, we will automate the process of selection and import of private keys).
 
-* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_trans.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user.
+* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_private_testnet.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user.
 #
 © 2021 Author: Dragan Bogatic
 
