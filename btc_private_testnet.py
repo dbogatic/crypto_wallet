@@ -10,8 +10,6 @@ load_dotenv()
 key = os.getenv('WIF_KEY')
 key = PrivateKeyTestnet(key)
 
-# input recipient addresses
-
 # print sender's address
 
 sender = (key.address)
