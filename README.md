@@ -17,15 +17,14 @@ This process is broken down in several main steps:
 
 * [Create a BTC-test transaction](#create-a-btc-test-transaction).
 
-* [Create a multi-crypto 
-wallet](#create-a-multi-crypto-wallet). 
+* [Create a multi-crypto wallet](#create-a-multi-crypto-wallet). 
 
 #
 ## Create private and public keys using hd-wallet-derive
 
 hd-wallet-derive is a command-line tool that derives bip32 addresses and private keys for Bitcoin and many altcoins. Derivation reports show privkey (wif encoded), xprv, xpub, and address. Source: [hd-wallet-derive](https://github.com/dan-da/hd-wallet-derive)
 
-* First we install the tool by cloning the hd-derive-repo, installing Hypertext Preprocessor [PHP](https://www.php.net/manual/en/intro-whatis.php), and [Composer](https://getcomposer.org/), dependency manager for PHP.
+* First we install the tool by cloning the hd-derive-repo, install Hypertext Preprocessor [PHP](https://www.php.net/manual/en/intro-whatis.php) and [Composer](https://getcomposer.org/), a dependency manager for PHP.
 
 * Next, we run a command line from hd-wallet-derive to derive private and public keys for BTC-test and ETH accounts. We use f" string to pass our mnemonic phrase from .env file and coin code from [constants.py](https://github.com/dbogatic/crypto_wallet/blob/main/constants.py) file into the command. 
 
