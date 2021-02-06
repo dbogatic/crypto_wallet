@@ -39,10 +39,13 @@ p_status = p.wait()
 # get keys in json format
 keys = json.loads(output)
 
-# create dataframe with keys and print json
+# create dataframe with keys 
 
 keys_df = pd.DataFrame(keys)
-keys_df.to_csv("resources/eth_keys")
+
+# print keys to .csv file if needed
+
+#keys_df.to_csv("resources/eth_keys")
 
 print(keys)
 
