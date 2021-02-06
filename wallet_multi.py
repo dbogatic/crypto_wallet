@@ -54,8 +54,8 @@ print(keys)
 # enter recipient addresses and amounts to be sent 
     
 if f'{which_coin}' == 'btc-test':
-    import btc_trans
-    print(btc_trans)
+    import btc_private_testnet
+    print(btc_private_testnet)
     
 elif f'{which_coin}' == 'eth':
     import eth_trans

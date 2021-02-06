@@ -98,11 +98,11 @@ The final step is to join hd-wallet-derive private key derivation tool, ETH tran
 
 * Next, if ETH was specified, it creates ETH private keys, obtains account information, prompts a user for the address and the amount to be sent, then sends a transaction and returns a confirmation.
 
-* In case that BTC-test was specified, the python file prompts the user for the recipients address, amount to me sent, obtains a sender's account information, sends a transaction and returns a confirmation.
+* In case that BTC-test was specified, the python file prompts the user for the btc amount to me sent, obtains a sender's account information, sends a transaction and returns a confirmation.
 
 * Please note that private keys are manually selected after being derived and placed in .env file to be hidden from public (in the next revision of this crypto-wallet repo, we will automate the process of selection and import of private keys).
 
-* The final automation of crypto transactions was accomplished by importing our [btc_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_trans.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user.
+* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_trans.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user.
 #
 © 2021 Author: Dragan Bogatic
 
