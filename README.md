@@ -72,6 +72,11 @@ The following step is to create BTC-test transaction using a python [bit](https:
 
 * Again, the first step is to obtain private keys we created with hd-wallet-derive so we can get addresses for the sender and receiver.
 
+* We have used `Account().from_key` instead of `privateKeyToAccount` method because the latter is being deprecated as we can see below form the documentation.
+
+![Screen_Shot9](images/Screen_Shot9.png)
+Source: [eth-account documentation](https://eth-account.readthedocs.io/en/stable/eth_account.html)
+
 * Then, we obtain sender account balance and unspent transactions. 
 
 * Next, we input the address of the recipient where we will send bitcoin.
