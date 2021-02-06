@@ -54,6 +54,11 @@ The next step is to create a ETH transaction by using Ethereum [Web3](https://we
 
 * First we obtain private keys from .env file to get sender and receiver addresses. 
 
+* Note that we used `Account().from_key` instead of `privateKeyToAccount` method because the latter is being deprecated as we can see below form the documentation.
+
+![Screen_Shot9](images/Screen_Shot9.png)
+Source: [eth-account documentation](https://eth-account.readthedocs.io/en/stable/eth_account.html)
+
 * Next, we create a raw and send transactions by passing the required parameters.
 
 * Finally, we send a transaction and obtain a confirmation.
@@ -71,11 +76,6 @@ The next step is to create a ETH transaction by using Ethereum [Web3](https://we
 The following step is to create BTC-test transaction using a python [bit](https://pypi.org/project/bit/) library. Please refer to [btc_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_trans.py) for details. 
 
 * Again, the first step is to obtain private keys we created with hd-wallet-derive so we can get addresses for the sender and receiver.
-
-* We have used `Account().from_key` instead of `privateKeyToAccount` method because the latter is being deprecated as we can see below form the documentation.
-
-![Screen_Shot9](images/Screen_Shot9.png)
-Source: [eth-account documentation](https://eth-account.readthedocs.io/en/stable/eth_account.html)
 
 * Then, we obtain sender account balance and unspent transactions. 
 
