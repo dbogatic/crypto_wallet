@@ -3,7 +3,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# access account information by accessing BTC-test private key we obtained from hd derive command in wallet.py (located in keys.ipynb in btc_test_priv_keys dataframe)
+# access account information by accessing BTC-test private key we obtained from hd-wallet-derive command in wallet-multi.py 
+# (located in keys.ipynb in btc_test_priv_keys dataframe)
 
 key = os.getenv("WIF_KEY")
 
@@ -33,16 +34,21 @@ unspent = key.unspents
 
 print(unspent)
 
-# input address we obtined from hd derive (the second BTC-test address in btc_test_keys.csv file) to send funds to, send funds and obtain transaction confirmation
+# input address we obtined from hd derive (the second BTC-test address in btc_test_keys.csv file) 
+# to send funds to, send funds and obtain transaction confirmation
 
 addresses = input(f'Please enter the address where funds will be sent to {""}')
-addresses = []
-print(addresses)
+amount = input(f'Please enter the BTC amount to send {""}')
 
+amount = []
+addresses = []
 outputs = []
 
+print(addresses)
+print(amount)
+
 for address in addresses:
-    outputs.append((address, 0.00001, "btc"))
+    outputs.append((address, f'{amount}', "btc"))
 
 print(key.send(outputs))
 

@@ -13,12 +13,13 @@ load_dotenv()
 
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 
-# obtain sender and receiver eth addresses by using a private key. The keys are created using hd derive and can be seen in eth_keys.csv or keys.ipynb
+# obtain sender and receiver eth addresses by using a private key. The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb
 
 account_one = Account().from_key(os.getenv("PRIVATE_KEY_SEND"))
 
 account_two = Account().from_key(os.getenv("PRIVATE_KEY_REC"))
 
+# obtain account balance for the sender and reciever 
 
 balance_account_one = w3.eth.getBalance(account_one.address)
 balance_account_two = w3.eth.getBalance(account_two.address)
@@ -40,7 +41,7 @@ def create_raw_tx(sender, recipient, amount):
         {"from": sender, 
         "to": recipient, 
         "value": amount})
-
+    
     nonce =  w3.eth.getTransactionCount(sender)+1
 
     return {
@@ -51,6 +52,7 @@ def create_raw_tx(sender, recipient, amount):
         "gas": gasEstimate,
         "nonce": nonce
     }
+
 
 def send_tx(sender, recipient, amount):
 
@@ -66,5 +68,6 @@ def send_tx(sender, recipient, amount):
 
     return result.hex()
 
-send_tx(account_one.address,account_two.address, 1)
+# send ETH transaction after entering the amount in input prompt; wait for the confirmation
 
+send_tx(account_one.address,account_two.address, int(input('Input ETH amount to be sent')))
