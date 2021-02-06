@@ -53,7 +53,9 @@ We use Blockchain-Tools and [geth](https://geth.ethereum.org/) and command ` ./p
 The next step is to create a ETH transaction by using Ethereum [Web3](https://web3js.readthedocs.io/en/v1.3.0/) library. Please refer to [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) file for details.
 
 * First we obtain private keys from .env file to get sender and receiver addresses. 
+
 * Next, we create a raw and send transactions by passing the required parameters.
+
 * Finally, we send a transaction and obtain a confirmation.
 
 ![eth_transaction](images/Screen_Shot3.png)
@@ -71,7 +73,9 @@ The following step is to create BTC-test transaction using a python [bit](https:
 * Again, the first step is to obtain private keys we created with hd-wallet-derive so we can get addresses for the sender and receiver.
 
 * Then, we obtain sender account balance and unspent transactions. 
+
 * Next, we input the address of the recipient where we will send bitcoin.
+
 * Finally, we create a transaction, send it and obtain a confirmation on the blockchain and Bitcoin Testnet. 
 
 ![testnet_confirm](images/Screen_Shot7.png)
@@ -86,9 +90,13 @@ The following step is to create BTC-test transaction using a python [bit](https:
 The final step is to join hd-wallet-derive private key derivation tool, ETH transaction and BTC-test transaction into one automated wallet that will derive keys for the specified crypto (in our case BTC-test, BTC or ETH) and execute prepared transactions based on the provided recipients' addresses and amounts as well as return transaction confirmations. For details please see [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py).
 
 * In order to accomplish this, we have created input user prompts that ask first for a crypto to be specified.
+
 * Next, if ETH was specified, it creates ETH private keys, obtains account information, prompts a user for the address and the amount to be sent, then sends a transaction and returns a confirmation.
+
 * In case that BTC-test was specified, the python file prompts the user for the recipients address, amount to me sent, obtains a sender's account information, sends a transaction and returns a confirmation.
+
 * Please note that private keys are manually selected after being derived and placed in .env file to be hidden from public (in the next revision of this crypto-wallet repo, we will automate the process of selection and import of private keys).
+
 * The final automation of crypto transactions was accomplished by importing our [btc_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_trans.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user.
 #
 © 2021 Author: Dragan Bogatic
