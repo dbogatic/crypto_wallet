@@ -30,7 +30,7 @@ hd-wallet-derive is a command-line tool that derives bip32 addresses and private
 
     ` command = f" ./derive -g  --mnemonic='{mnemonic_phrase}' --coin='{which_coin}' --numderive=3  --cols=path,address,privkey,pubkey --format=json " `
 
-* The command will return our keys depending on the crypto we selected (which-coin) in [wallet_multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) python file. 
+* The command will return our keys depending on the crypto we selected (which_coin) in [wallet_multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) python file. 
 
 * We select keys we will use and put them in .env file or keystore folder to hide them from public.
 
@@ -38,7 +38,7 @@ hd-wallet-derive is a command-line tool that derives bip32 addresses and private
 #
 ## Create a local Proof of Work blockchain
 
-We use Blockchain-Tools and [geth](https://geth.ethereum.org/) and command ` ./puppeth` to create a local "bogicash' PoW blockchain which we will use to facilitate crypto transactions. 
+We use Blockchain-Tools and [geth](https://geth.ethereum.org/) and command ` ./puppeth` to create a local "bogicash" PoW blockchain which we will use to facilitate crypto transactions. 
 
 ![geth](images/Screen_Shot1.png)
 
