@@ -5,7 +5,7 @@
 Source: [Pixabay](https://pixabay.com/photos/cryptocurrency-business-finance-3085139/#)
 #
 
-The repo describes a process of deriving private and public crypto keys that  will be used to get public addresses which are needed to initiate crypto transactions on a local blockchain.
+The repo describes a process of deriving private and public crypto keys using hd-wallet-derive that  will be used to execute automated crypto transactions on a local blockchain.
 
 This process is broken down in several main steps:
 
