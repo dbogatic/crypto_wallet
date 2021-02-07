@@ -5,9 +5,9 @@
 Source: [Pixabay](https://pixabay.com/photos/cryptocurrency-business-finance-3085139/#)
 #
 
-The repo describes a process of deriving private and public crypto keys using hd-wallet-derive that  will be used to execute automated crypto transactions on a local blockchain.
+Crypto wallet allows a user to create private and public crypto keys using hd-wallet-derive tool, that  will be used to execute automated crypto transactions on a local blockchain. The end result is [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) which, upon crypto selection (BTC-test, BTC or ETH) by the user, derives private and public keys, creates a crypto transaction after being supplied with recipient's address and the amount, sends a transaction and displays transaction confirmation.
 
-This process is broken down in several main steps:
+This process of crypto-wallet creation is broken down in several main steps:
 
 * [Create private and public keys using hd-wallet-derive](#create-private-and-public-keys-using-hd-wallet-derive). 
 
@@ -79,9 +79,7 @@ The following step is to create BTC-test transaction using a python [bit](https:
 
 * Then, we obtain sender account balance and unspent transactions. 
 
-* Next, we specify the address of the recipient where we will send bitcoin.
-
-* Then we input the btc amount to be sent in the user prompt window.
+* Next, we input the address of the recipient where we will send BTC and the amount.
 
 * Finally, we create a transaction, send it and obtain a confirmation on the Bitcoin Testnet. 
 
@@ -96,15 +94,15 @@ The following step is to create BTC-test transaction using a python [bit](https:
 
 The final step is to join hd-wallet-derive private key derivation tool, ETH transaction and BTC-test transaction into one automated wallet that will derive keys for the specified crypto (in our case BTC-test, BTC or ETH) and execute prepared transactions based on the provided recipients' addresses and amounts as well as return transaction confirmations. For details please see [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py).
 
-* In order to accomplish this, we have created input user prompts that ask first for a crypto to be specified.
+* In order to accomplish this, we have created user input prompts that ask first for a crypto to be specified.
 
 * Next, if ETH was specified, it creates ETH private keys, obtains account information, prompts a user for the address and the amount to be sent, then sends a transaction and returns a confirmation.
 
-* In case that BTC-test was specified, the python file prompts the user for the btc amount to me sent, obtains a sender's account information, sends a transaction and returns a confirmation.
+* In case that BTC-test was specified, the python file prompts the user for the recipient's address, BTC amount to be sent, obtains a sender's account information, sends a transaction and returns a confirmation.
 
 * Please note that private keys are manually selected after being derived and placed in .env file to be hidden from public (in the next revision of this crypto-wallet repo, we will automate the process of selection and import of private keys).
 
-* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_private_testnet.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user.
+* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_private_testnet.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user after the `which_coin` user input prompt.
 #
 © 2021 Author: Dragan Bogatic
 

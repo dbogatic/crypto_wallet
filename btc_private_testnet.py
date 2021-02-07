@@ -18,7 +18,7 @@ print(sender)
 
 # input recipients' addresses
 
-recipient = 'n1RdWn8KdvGx9u2SxuG8Lxnvg6R7hRtDVC'
+recipient = input(f'Please enter the address where BTC will be sent to {""}')
 
 # input btc amount to be sent to the recipient
 
@@ -45,9 +45,6 @@ print(tx_data)
 # sign btc transaction
 
 tx_hex = key.sign_transaction(tx_data)
-
-recipients = []
-
 print(tx_hex)
 
 # send btc transaction and obtain tx confirmation
@@ -57,8 +54,3 @@ tx_hash = key.send([(f"{recipient}",f"{amount}",'btc')])
 # print transaction confoirmation
 
 print(tx_hash)
-
-# check sender's account balance again
-
-print(key.get_balance())
-
