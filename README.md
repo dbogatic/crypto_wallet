@@ -102,7 +102,7 @@ The final step is to join hd-wallet-derive private key derivation tool, ETH tran
 
 * Please note that private keys are manually selected after being derived and placed in .env file to be hidden from public (in the next revision of this crypto-wallet repo, we will automate the process of selection and import of private keys).
 
-* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_private_testnet.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files through an if statement, after determining which crypto was selected by the user after the `which_coin` user input prompt.
+* The final automation of crypto transactions was accomplished by importing our [btc_private_testnet.py](https://github.com/dbogatic/crypto_wallet/blob/main/btc_private_testnet.py) and [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) python files into the main [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) file, through an if statement, after determining which crypto was selected by the user in the `which_coin` user input prompt.
 #
 © 2021 Author: Dragan Bogatic
 
