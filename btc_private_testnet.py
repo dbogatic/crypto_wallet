@@ -26,6 +26,10 @@ amount = input(f'Please enter the BTC amount to send {""}')
 
 # obtain sender account balance in usd
 
+''' 
+Source code: https://ofek.dev/bit/guide/advanced.html
+
+'''
 btc_balance_usd = satoshi_to_currency(NetworkAPI.get_balance_testnet(f"{sender}"), 'usd')
 
 print(btc_balance_usd)

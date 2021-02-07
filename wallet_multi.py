@@ -1,9 +1,6 @@
 import subprocess
 import json
 from pprint import pprint
-from bit import wif_to_key
-from web3 import Web3
-from eth_account import Account
 import pandas as pd
 import os
 from dotenv import load_dotenv
@@ -15,13 +12,19 @@ from constants import *
 
 which_coin = input(f" Select your coin to obtain a private key. Type in one of the following: {BTCTEST, BTC, ETH}")
 
-''' source code: 
-https://stackoverflow.com/questions/32928143/how-to-continue-asking-user-for-input-until-it-is-considered-valid
+''' 
+Source code: https://stackoverflow.com/questions/32928143/how-to-continue-asking-user-for-input-until-it-is-considered-valid
+
 '''
 
+# ask user for the correct input if incorrect one provided; if correct input derive keys and initiate a crypto transaction
+
 while which_coin not in ("btc-test", "eth", "btc"):
+    
     print(f"This is not a valid entry, please pick again from {BTCTEST, BTC, ETH}.")
+    
     which_coin = input(f" Select your coin to obtain a private key. Type in one of the following: {BTCTEST, BTC, ETH}")
+
 print(f"Thank you! Here are your {which_coin} keys and transaction!")
 
 # pass mnemonic phrase to derive code to obtain set of public and private keys
@@ -62,4 +65,3 @@ elif f'{which_coin}' == 'eth':
     print(eth_trans)
      
 else: pass
-
