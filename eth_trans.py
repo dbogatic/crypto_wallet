@@ -2,8 +2,6 @@ import os
 from web3 import Web3
 from dotenv import load_dotenv
 from eth_account import Account
-
-#from eth_account import accounts
 from pathlib import Path
 from getpass import getpass
 load_dotenv()
