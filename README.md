@@ -63,11 +63,11 @@ Source: [eth-account documentation](https://eth-account.readthedocs.io/en/stable
 
 * Finally, we send a transaction and obtain a confirmation.
 
-![eth_transaction](images/Screen_Shot3.png)
+![eth_transaction](images/Screen_Shot14.png)
 
-![pending_eth](images/Screen_Shot4.png)
+![pending_eth](images/Screen_Shot16.png)
 
-![blockchain_confirmation](images/Screen_Shot5.png)
+![blockchain_confirmation](images/Screen_Shot15.png)
 
 * We can see the matching TX Hash on MyCrypto and the blockchain.
 #
