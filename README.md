@@ -34,7 +34,7 @@ hd-wallet-derive is a command-line tool that derives bip32 addresses and private
 
 * We select keys we will use and put them in .env file or keystore folder to hide them from public.
 
-* We can see derived keys in [keys.ipynb](https://github.com/dbogatic/crypto_wallet/blob/main/keys.ipynb) notebook.
+* We can see derived keys in [keys.ipynb](https://github.com/dbogatic/crypto_wallet/blob/main/keys.ipynb) notebook and in [resources](https://github.com/dbogatic/crypto_wallet/tree/main/resources) folder in .csv files.
 #
 ## Create a local Proof of Work blockchain
 
