@@ -83,9 +83,9 @@ The following step is to create BTC-test transaction using a python [bit](https:
 
 * Finally, we create a transaction, send it and obtain a confirmation on the Bitcoin Testnet. 
 
-![testnet_confirm](images/Screen_Shot10.png)
+![testnet_confirm](images/Screen_Shot13.png)
 
-![btc_blockchain_confirm](images/Screen_Shot11.png)
+![btc_blockchain_confirm](images/Screen_Shot12.png)
 
 * We can see the matching TX Hash for blockchain and Bitcoin Testnet confirmations.
 
