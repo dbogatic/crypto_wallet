@@ -18,7 +18,7 @@ account_one = Account().from_key(os.getenv("PRIVATE_KEY_SEND"))
 
 # input the address where ETH will be sent 
 
-account_two = input(f'Please type in the address where ETH will be sent to {""}')
+account_two = input(f'Please type in the address where ETH will be sent to: {""}')
 
 # obtain account balance for the sender and reciever 
 
@@ -72,4 +72,4 @@ def send_tx(sender, recipient, amount):
 
 # send ETH transaction after entering the amount in input prompt; wait for the confirmation
 
-send_tx(account_one.address,account_two, int(input('Input ETH amount to be sent (do not enter float): ')))
+send_tx(account_one.address,account_two, int(input('Type in ETH amount to be sent (do not enter float): ')))
