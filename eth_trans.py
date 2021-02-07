@@ -11,16 +11,19 @@ load_dotenv()
 
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 
-# obtain sender and receiver eth addresses by using a private key. The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb
+# obtain sender eth address by using a private key. 'privateKeytoAccount' method is being deprecated for 'Account.from' method, which was used here.
+# The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb
 
 account_one = Account().from_key(os.getenv("PRIVATE_KEY_SEND"))
 
-account_two = Account().from_key(os.getenv("PRIVATE_KEY_REC"))
+# input the address where ETH will be sent 
+
+account_two = input(f'Please type in the address where BTC will be sent to {""}')
 
 # obtain account balance for the sender and reciever 
 
 balance_account_one = w3.eth.getBalance(account_one.address)
-balance_account_two = w3.eth.getBalance(account_two.address)
+balance_account_two = w3.eth.getBalance(account_two)
 
 # print accounts, addresses and balances for sender and receiver 
 
@@ -28,10 +31,11 @@ print(account_one)
 print(account_one.address)
 print(balance_account_one)
 print(account_two)
-print(account_two.address)
+print(account_two)
 print(balance_account_two)
 
-# define, create and confirm a ETH transaction from sender to receiver and estimate gas (miner) fees. Nonce + 1 is to ensure transactions are not being canceled because of the same nonce value
+# define, create and confirm a ETH transaction from sender to receiver and estimate gas (miner) fees. 
+# Nonce + 1 is to ensure transactions are not being canceled because of the same nonce value
 
 def create_raw_tx(sender, recipient, amount):
 
@@ -68,4 +72,4 @@ def send_tx(sender, recipient, amount):
 
 # send ETH transaction after entering the amount in input prompt; wait for the confirmation
 
-send_tx(account_one.address,account_two.address, int(input('Input ETH amount to be sent')))
+send_tx(account_one.address,account_two, int(input('Input ETH amount to be sent')))

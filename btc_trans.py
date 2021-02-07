@@ -37,7 +37,7 @@ print(unspent)
 # input address we obtined from hd derive (the second BTC-test address in btc_test_keys.csv file) 
 # to send funds to, send funds and obtain transaction confirmation
 
-addresses = input(f'Please enter the address where funds will be sent to {""}')
+addresses = input(f'Please enter the address where BTC will be sent to {""}')
 amount = input(f'Please enter the BTC amount to send {""}')
 
 amount = []
