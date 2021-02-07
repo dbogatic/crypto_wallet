@@ -5,9 +5,9 @@
 Source: [Pixabay](https://pixabay.com/photos/cryptocurrency-business-finance-3085139/#)
 #
 
-Crypto wallet allows a user to create private and public crypto keys using hd-wallet-derive tool, that  will be used to execute automated crypto transactions on a local blockchain. The end result is [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) which, upon crypto selection (BTC-test, BTC or ETH) by the user, derives private and public keys, creates a crypto transaction after being supplied with recipient's address and the amount, sends a transaction and displays transaction confirmation.
+Crypto wallet allows a user to create private and public crypto keys using hd-wallet-derive tool, that  will be used to execute automated crypto transactions on a local blockchain. The end result is [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) which, upon crypto selection (BTC-test, BTC or ETH) by the user, derives private and public keys, creates a crypto transaction after being supplied with recipient's address and the amount, sends a transaction and displays a transaction confirmation.
 
-This process of crypto-wallet creation is broken down in several main steps:
+This process of crypto wallet creation is broken down in several main steps:
 
 * [Create private and public keys using hd-wallet-derive](#create-private-and-public-keys-using-hd-wallet-derive). 
 
