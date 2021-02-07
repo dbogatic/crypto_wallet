@@ -5,7 +5,7 @@
 Source: [Pixabay](https://pixabay.com/photos/cryptocurrency-business-finance-3085139/#)
 #
 
-Crypto wallet allows a user to create private and public crypto keys using hd-wallet-derive tool, that  will be used to execute automated crypto transactions on a local blockchain. The end result is [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) which, upon crypto selection (BTC-test, BTC or ETH) by the user, derives private and public keys, creates a crypto transaction after being supplied with recipient's address and the amount, sends a transaction and displays a transaction confirmation.
+Crypto wallet allows a user to create private and public crypto keys using hd-wallet-derive tool, that  will be used to execute automated crypto transactions on a local blockchain. The end result is [wallet-multi.py](https://github.com/dbogatic/crypto_wallet/blob/main/wallet_multi.py) which, upon crypto selection (BTC-test or ETH) by the user, derives private and public keys, creates a crypto transaction after being supplied with recipient's address and the amount, sends a transaction and displays a transaction confirmation. Note that crypto transaction is created only for BTC-test and ETH testnet, because BTC is working with real bitcoins on the mainnet.
 
 This process of crypto wallet creation is broken down in several main steps:
 
@@ -52,9 +52,9 @@ We use Blockchain-Tools and [geth](https://geth.ethereum.org/) and command ` ./p
 
 The next step is to create a ETH transaction by using Ethereum [Web3](https://web3js.readthedocs.io/en/v1.3.0/) library. Please refer to [eth_trans.py](https://github.com/dbogatic/crypto_wallet/blob/main/eth_trans.py) file for details.
 
-* First we obtain private keys from .env file to get sender and receiver addresses. 
+* First we obtain sender's private key from  [keys.ipynb](https://github.com/dbogatic/crypto_wallet/blob/main/keys.ipynb) to get sender's  address. 
 
-* Note that we used `Account().from_key` instead of `privateKeyToAccount` method because the latter is being deprecated as we can see below form the documentation.
+* Note that we have shown both methods, `Account().from_key` and `privateKeyToAccount` method, because the latter is being deprecated as we can see below form the documentation.
 
 ![Screen_Shot9](images/Screen_Shot9.png)
 Source: [eth-account documentation](https://eth-account.readthedocs.io/en/stable/eth_account.html)

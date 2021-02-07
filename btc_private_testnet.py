@@ -1,14 +1,18 @@
 from bit import PrivateKeyTestnet
 from bit.network import NetworkAPI, satoshi_to_currency
 import os
+import pandas as pd
 from dotenv import load_dotenv
 load_dotenv()
 
 
-# obtain a sender's private key
+# obtain a sender's private key from keys.ipynb
 
-key = os.getenv('WIF_KEY')
-key = PrivateKeyTestnet(key)
+btc_test_keys_df = pd.read_csv("resources/btc_test_keys")
+btc_test_priv_keys = btc_test_keys_df['privkey']
+btc_test_select_priv_key = btc_test_priv_keys.iloc[0]
+
+key = PrivateKeyTestnet(btc_test_select_priv_key)
 
 # print sender's address
 
