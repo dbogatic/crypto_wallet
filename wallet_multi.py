@@ -52,9 +52,9 @@ keys_df = pd.DataFrame(keys)
 
 print(keys)
 
-# pass the appropriate py file based on coin selection to obtain env private keys, 
-# verify addresses, balances and execute transactions and see confirnmations; follow the input prompts to
-# enter recipient addresses and amounts to be sent 
+# pass the appropriate py file based on coin selection to obtain sender's private keys, 
+# verify addresses, balances and execute transactions and see confirnmations; follow the 
+# user input prompts to enter recipient addresses and amounts to be sent 
     
 if f'{which_coin}' == 'btc-test':
     import btc_private_testnet
