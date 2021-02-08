@@ -77,7 +77,7 @@ The following step is to create BTC-test transaction using a python [bit](https:
 
 * Again, the first step is to obtain private keys we created with hd-wallet-derive so we can get address for the sender. In this case we use `PrivateKeyTestnet()` method. As an alternative, we could use `wif_to_key()` method. We can read in private key either from the pandas dataframe or from .env file. 
 
-* Then, we obtain sender account information.
+* Then, we obtain sender account balance and unspent transactions.
 
 * Next, we input the address of the recipient and BTC amount to send.
 

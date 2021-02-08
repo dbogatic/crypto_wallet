@@ -8,12 +8,15 @@ from getpass import getpass
 load_dotenv()
 
 
-# we will be using a Web3 library on a local host to conduct eth transaction between two nodes in a running local blockchain "bogicash"
+# we will be using a Web3 library on a local host to conduct eth transaction between 
+# two nodes in a running local blockchain "bogicash"
 
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 
-# obtain sender eth address by using a private key. Since 'privateKeytoAccount' method is being deprecated for 'Account.from' method which is shown below in commented section.
-# The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb. We manually selected the key to be used for sender's account. 
+# obtain sender eth address by using a private key. Since 'privateKeytoAccount()' method is being deprecated for 'Account.from()' method 
+# we have shown both
+# The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb dataframes
+# We manually selected the key to be used for sender's account
 
 eth_keys_df = pd.read_csv("resources/eth_keys")
 eth_priv_keys = eth_keys_df["privkey"]

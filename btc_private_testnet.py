@@ -20,7 +20,7 @@ key = PrivateKeyTestnet(btc_test_select_priv_key)
 wif_key = os.getenv("WIF_KEY")
 key = PrivateKeyTestnet(wif_key)
 
-# or we could use bit 'wif_to_key' method to acomplish the same task
+# or we could use bit 'wif_to_key' method to accomplish the same task
 
 # from dataframe 
 
@@ -59,6 +59,12 @@ print(btc_balance_usd)
 btc_balance_btc = satoshi_to_currency(NetworkAPI.get_balance_testnet(f"{sender}"), 'btc')
 
 print(btc_balance_btc)
+
+# obtain sender's account unspents balance
+
+btc_balance_unspents = key.get_unspents()
+
+print(btc_balance_unspents)
 
 # prepare btc transaction
 
