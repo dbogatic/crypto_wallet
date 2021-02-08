@@ -52,10 +52,8 @@ balance_account_two = w3.eth.getBalance(account_two)
 
 # print accounts, addresses and balances for sender and receiver 
 
-print(account_one)
 print(account_one.address)
 print(balance_account_one)
-print(account_two)
 print(account_two)
 print(balance_account_two)
 
