@@ -13,18 +13,30 @@ load_dotenv()
 w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 
 # obtain sender eth address by using a private key. Since 'privateKeytoAccount' method is being deprecated for 'Account.from' method which is shown below in commented section.
-# The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb. We manually selected the key to be used for sender's account.
+# The keys are created using hd-wallet-derive and can be seen in eth_keys.csv or keys.ipynb. We manually selected the key to be used for sender's account. 
 
 eth_keys_df = pd.read_csv("resources/eth_keys")
 eth_priv_keys = eth_keys_df["privkey"]
 eth_select_priv_key = eth_priv_keys.iloc[0]
 eth_select_priv_key
 
+# read in the private key from pandas dataframe and select specific key with iloc 
+
 account_one = Account().privateKeyToAccount(eth_select_priv_key)
 
-# alternative to use to obtain sender address
+# we could also read in private key from the .env file to be hidden from public
+
+account_one = Account().privateKeyToAccount(os.getenv("PRIVATE_KEY_SEND"))
+
+# alternative to use to obtain sender address Account.().from
+
+# from pandas dataframe 
 
 account_one = Account().from_key(eth_select_priv_key)
+
+# or from .env file
+
+account_one = Account().from_key(os.getenv("PRIVATE_KEY_SEND"))
 
 # input the address where ETH will be sent 
 
